@@ -323,6 +323,11 @@ img{
 .about_subtitle{
     margin-bottom: var(--mb-2);
 }
+.about_text{
+    font-size: var(--normal-font-size);
+    font-style: var(--body-font);
+    font-weight: bold;
+}
 .about_img{
     justify-self: center;
 
@@ -346,6 +351,9 @@ img{
 }
 .skills_text{
     margin-bottom: var(--mb-4);
+    font-size: var(--normal-font-size);
+    font-style: var(--body-font);
+    font-weight: bold;
 }
 .skills_data{
     display: flex;
