@@ -471,6 +471,10 @@ img{
     font-size: 2rem;
     margin-bottom: var(--mb-4);
 }
+.footer_title:hover{
+    color: var(--first-color);
+    transition: 3s;  
+}
 .footer_social{
     margin-bottom: var(--mb-4);
 }
