@@ -194,6 +194,9 @@ img{
 .nav_logo:hover{
     color: var(--first-color);
 }
+#nav_icon:hover{
+    color: var(--first-color);
+}
 @media screen and (max-width: 768px){
     .nav_menu{
     position: fixed;
@@ -472,7 +475,7 @@ img{
     margin-bottom: var(--mb-4);
 }
 .footer_title:hover{
-    color: var(--first-color);
+    color: rgba(255,0,0,0);
     transition: 3s;  
 }
 .footer_social{
