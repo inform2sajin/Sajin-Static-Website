@@ -10,6 +10,7 @@
    <!---- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
     <title class="preloader">Sajin</title>
     <link rel="shortcut icon" href="images/icon.png" type="image/x-icon" id="icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
     </script>
 </head>
@@ -160,11 +161,19 @@
       <section class="contact section" id="contact">
           <h2 class="section-title">Contact</h2>
           <div class="contact_container bd-grid">
+              <!-------
               <form action="" class="contact_form">
                   <input type="text" placeholder="Name" class="contact_input">
                   <input type="mail" placeholder="Email" class="contact_input">
                   <textarea name="" id="0" cols="30" rows="10" placeholder="Message" class="contact_input"></textarea>
                   <input type="button" value="Send" class="contact_button button">
+              </form> ----->
+              <form id="submit-form" action="" class="contact_form" >
+                  <input type="text" name="name" placeholder="Name" class="contact_input">
+                  <input type="email" name="email" placeholder="Email" class="contact_input">
+                  <input type="text" name="country" placeholder="Country" class="contact_input">
+                  <textarea name="message" id="0" cols="30" rows="10" placeholder="Write your message" class="contact_input"></textarea>
+                  <input type="submit" value="Submit" class="contact_button button">
               </form>
               <div>
                   <div class="contact_info">
@@ -203,6 +212,28 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script> 
     -->
     <script src="script.js">
+
+    </script>
+    <script>
+        
+       $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbwSmNeCSq-dN1czxVy7yEf0roGO6x8QHhs5EF4ccXy3Yg6WHoF6f7bul01_bzfh4DmE/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully.....")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    
 
     </script>
     
